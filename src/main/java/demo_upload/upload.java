@@ -16,7 +16,7 @@ response.setContentType("text/html");
 PrintWriter out = response.getWriter();  
           
 
-MultipartRequest m=new MultipartRequest(request,System.getenv("OPENSHIFT_DATA_DIR")+"/app-root/data");
+MultipartRequest m=new MultipartRequest(request,System.getenv("OPENSHIFT_DATA_DIR")images+System.getenv("OPENSHIFT_REPO_DIR")+"/");
 out.print("successfully uploaded");  
 }  
 }  

@@ -15,7 +15,7 @@ public void doPost(HttpServletRequest request, HttpServletResponse response)
 response.setContentType("text/html");  
 PrintWriter out = response.getWriter();  
           
-MultipartRequest m=new MultipartRequest(request,"E:/upload");  
+MultipartRequest m=new MultipartRequest(request,System.getenv("OPENSHIFT_DATA_DIR")+"uploads/");  
 out.print("successfully uploaded");  
 }  
 }  
